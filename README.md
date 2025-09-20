@@ -1,6 +1,6 @@
 # bpi-r4-openwrt-builder
  
- >git clone ht<span>tps://github.com/woziwrt/bpi-r4-openwrt-builder.git
+ >git clone ht<span>tps://github.com/paladzin/bpi-r4-openwrt-builder.git
  
  >chmod 776 -R bpi-r4-openwrt-builder
  
