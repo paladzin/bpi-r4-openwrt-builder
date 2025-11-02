@@ -15,7 +15,7 @@
 rm -rf openwrt
 rm -rf mtk-openwrt-feeds
 
-git clone --branch openwrt-24.10 https://git.openwrt.org/openwrt/openwrt.git openwrt || true
+git clone --branch openwrt-24.10 https://github.com/openwrt/openwrt.git openwrt || true
 cd openwrt; git checkout 859ff7a978aea150588e7e21a1333884ab85739f; cd -;		#OpenWrt v24.10.4: revert to branch defaults
 
 
