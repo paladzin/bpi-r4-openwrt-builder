@@ -61,7 +61,7 @@ exit 0
 ###### Then you can add all required additional feeds/packages ######### 
 
 # dts overlay for disable m2 sim1 pcie mode
-#\cp -r ..my_files/mt7988a-bananapi-bpi-r4-disable-pcie2.dtso target/linux/mediatek/files-6.6/arch/arm64/boot/dts/mediatek/mt7988a-bananapi-bpi-r4-disable-pcie2.dtso
+#\cp -r ../my_files/mt7988a-bananapi-bpi-r4-disable-pcie2.dtso target/linux/mediatek/files-6.6/arch/arm64/boot/dts/mediatek/mt7988a-bananapi-bpi-r4-disable-pcie2.dtso
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
