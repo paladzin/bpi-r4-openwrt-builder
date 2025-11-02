@@ -60,27 +60,17 @@ exit 0
 
 ###### Then you can add all required additional feeds/packages ######### 
 
-# Telit FN990 modem extension
- 
-#cd openwrt
-#\cp -r ../my_files/sms-tool/ feeds/packages/utils/sms-tool
-#\cp -r ../my_files/modemdata-main/ feeds/packages/utils/modemdata 
-#\cp -r ../my_files/luci-app-modemdata-main/luci-app-modemdata/ feeds/luci/applications
-#\cp -r ../my_files/luci-app-lite-watchdog/ feeds/luci/applications
-#\cp -r ../my_files/luci-app-sms-tool-js-main/luci-app-sms-tool-js/ feeds/luci/applications
+# dts overlay for disable m2 sim1 pcie mode
+#\cp -r ..my_files/mt7988a-bananapi-bpi-r4-disable-pcie2.dtso target/linux/mediatek/files-6.6/arch/arm64/boot/dts/mediatek/mt7988a-bananapi-bpi-r4-disable-pcie2.dtso
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-#\cp -r ../my_files/qmi.sh package/network/utils/uqmi/files/lib/netifd/proto/
-#chmod -R 755 package/network/utils/uqmi/files/lib/netifd/proto
-#chmod -R 755 feeds/luci/applications/luci-app-modemdata/root
-#chmod -R 755 feeds/luci/applications/luci-app-sms-tool-js/root
-#chmod -R 755 feeds/packages/utils/modemdata/files/usr/share
+
 
 ####### And finally configure whatever you want ##########
 
-\cp -r ../configs/mm_perf.config .config
+\cp -r ../configs/fb-modem.config .config
 make menuconfig
 make V=s -j$(nproc)
 
